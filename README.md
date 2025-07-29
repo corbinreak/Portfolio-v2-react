@@ -33,10 +33,13 @@ A personal portfolio website built with React and Vite. Showcases my projects, s
 ```
 Portfolio-V2-React/
 ├── node_modules/
-├── public/                 ← optional, if you add static assets
+├── public/                  
 ├── src/
 │   ├── components/
-│   │   └── Header.jsx
+│   │   └──About.jsx
+|   |   └──Contact.jsx
+|   |   └──Header.jsx
+|   |   └──Projects.jsx
 │   ├── assets/
 │   │   └── download.svg
 │   ├── App.jsx
