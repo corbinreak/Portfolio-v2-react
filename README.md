@@ -31,27 +31,25 @@ A personal portfolio website built with React and Vite. Showcases my projects, s
 
 ## Folder Structure
 ```
-Portfolio-v2-react/
-    Portfolio-V2-React/
-      node_modules/
-      src/
-        Components/
-          Header.jsx
-        assets/
-          download.svg
-      App.jsx
-      index.css
-      App.css
-      main.jsx
-     .gitignore
-      eslint.config.js
-      index.html
-      package-lock
-      package.json
-      README.md
-      vite.config.js
-    package.json
-  ...
+Portfolio-V2-React/
+├── node_modules/
+├── public/                 ← optional, if you add static assets
+├── src/
+│   ├── components/
+│   │   └── Header.jsx
+│   ├── assets/
+│   │   └── download.svg
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── App.css
+├── .gitignore
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+├── README.md
+└── eslint.config.js
 ```
 
 ## License
