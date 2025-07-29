@@ -1,3 +1,35 @@
+.toggle img {
+    text-decoration: none;
+    padding: 4px 4px;
+}
+
+
+
+.toggle img:hover {
+    background: lightgray;
+    color: black;
+    padding: 4px 4px;
+    border-radius: 16px;
+    transition: background-color 0.3s ease;
+    
+}
+
+
+.right-group a {
+    text-decoration: none;
+    color: black;
+    padding: 4px 8px;
+    transition: background-color 0.3s ease;
+    border-radius: 16px;
+}
+
+.right-group a h1:hover {
+    background-color: lightgray;
+    color: red;
+    padding: 8px 24px;
+    border-radius: 16px;
+}
+
 .footer {
     display: flex;
     justify-content: space-around;
@@ -32,7 +64,7 @@
 }
 
     .footer li a:hover {
-        color: white;
+        color: red;
         padding: 8px 24px;
         background-color: lightgray;
         border-radius: 16px;
