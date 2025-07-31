@@ -3,6 +3,37 @@
     padding: 4px 4px;
 }
 
+.right-group a {
+    text-decoration: none;
+    color: black;
+    padding: 4px 8px;
+    transition: background-color 0.3s, color 0.3s, padding 0.3s;
+    border-radius: 16px;
+}
+
+    .right-group a h1:hover {
+        background-color: lightgray;
+        color: red;
+        padding: 8px 24px;
+        border-radius: 16px;
+}
+
+.home a {
+    text-decoration: none;
+    color: black;
+    padding: 4px 8px;
+    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+    border-radius: 16px;
+}
+
+.home a h1:hover {
+    background-color: lightgray;
+    color: red;
+    padding: 8px 24px;
+    border-radius: 16px;
+}
+
+
 
 
 .toggle img:hover {
@@ -15,20 +46,48 @@
 }
 
 
-.right-group a {
-    text-decoration: none;
-    color: black;
-    padding: 4px 8px;
-    transition: background-color 0.3s ease;
-    border-radius: 16px;
+html.dark {
+    background-color: black;
+    color: white;
 }
 
-.right-group a h1:hover {
-    background-color: lightgray;
-    color: red;
-    padding: 8px 24px;
-    border-radius: 16px;
+html.light {
+    background-color: white;
+    color: black;
 }
+
+
+html.dark .footer, #footer-nav h1 {
+    background-color: black;
+    color: white;
+}
+
+html.light .footer, #footer-nav h1 {
+    background-color: white;
+    color: black;
+}
+
+
+
+        html.dark .footer li a {
+            color: white;
+        }
+
+                html.dark .footer li a:hover {
+            color: red;
+            padding: 8px 24px;
+                }
+
+        html.light .footer li a:hover {
+            color: red;
+            padding: 8px 24px;
+        }
+
+        html.light .footer li a {
+            color: black;
+        }
+
+
 
 .footer {
     display: flex;
@@ -69,3 +128,4 @@
         background-color: lightgray;
         border-radius: 16px;
     }
+

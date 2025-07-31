@@ -3,7 +3,7 @@ import toggleIcon from '../assets/download.svg';
 import '../App.css';
 
 
-function Header() {
+function Header({ darkMode, setDarkMode }) {
 
     // Styling for the header
 
@@ -13,7 +13,8 @@ function Header() {
         alignItems: 'center',
         padding: '10px 20px',
         borderBottom: '1px solid #808080',
-        backgroundColor: 'white',
+        backgroundColor: darkMode ? 'black' : 'white',
+        color: darkMode ? 'white' : 'black',
         top: 0,
         left: 0,
         width: '100%',
@@ -33,7 +34,8 @@ function Header() {
         height: '30px',
         width: '30px',
         cursor: 'pointer',
-        marginRight: '55px'
+        marginRight: '55px',
+        filter: darkMode ? 'invert(100%)' : 'none',
     };
 
     const rightGroupStyle = {
@@ -61,7 +63,7 @@ function Header() {
           <h1 style={homeStyle}>About</h1>
          </a>
          <a className='toggle' href='#'>
-           <img src={toggleIcon} style={toggleStyle} alt="toggle-mode" />
+           <img src={toggleIcon} alt="toggle-mode" onClick={() => setDarkMode(prev => !prev)} style={toggleStyle} />
         </a>
       </div>
       

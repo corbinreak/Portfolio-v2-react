@@ -1,10 +1,11 @@
 import React from 'react'; 
 
-function Footer() {
+
+function Footer({ darkMode, setDarkMode }) {
 
     return (
         <div className="footer-nav">
-            <p style={{ color: 'black', margin: '50px 0 50px 40%', fontSize: '1.5rem'}}>Get A Hold of Me!</p>
+            <p style={{ color: darkMode ? 'white' : 'black', margin: '50px 0 50px 40%', fontSize: '1.5rem'}}>Get A Hold of Me!</p>
                 <ul style={{ listStyleType: 'none', display: 'flex', justifyContent: 'space-around', fontSize: '1.2rem'}}>
                     <li><a href="https://app.joinhandshake.com/profiles/74pfkv">Handshake</a></li>
                     <li><a href="https://www.linkedin.com/in/corbin-reak-900390214">Linkedin</a></li>
