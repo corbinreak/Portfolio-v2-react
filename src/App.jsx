@@ -19,25 +19,28 @@ function App() {
     localStorage.setItem('theme', darkMode ? 'dark' : 'light');
   }, [darkMode]);
 
-  return (
-    <>
-    <div className="App">
+ return (
+  <div className="App">
+    <div className="content">
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-      
-      <Projects />
       <Contact />
-    </div>
-    <div className='about' style={{ marginTop: '60px' }}>
-      <About darkMode={darkMode}  setDarkMode={setDarkMode} />
-    </div>
-      <div className="footer">
-        <div className="footer-line">
-          <p style={{ marginTop: '15px' }}> &copy; 2025 Corbin Reak</p>
-             <Footer darkMode={darkMode} setDarkMode={setDarkMode} />
-        </div>
+      <div className="about" style={{ marginTop: '60px' }}>
+        <About darkMode={darkMode} setDarkMode={setDarkMode} />
       </div>
-    </>
-  )
+      <div className="projects" style={{ marginTop: '60px' }}>
+        <Projects darkMode={darkMode} setDarkMode={setDarkMode} />
+      </div>
+    </div>
+
+    <div className="footer">
+      <div className="footer-line">
+        <p style={{ marginTop: '15px' }}>&copy; 2025 Corbin Reak</p>
+        <Footer darkMode={darkMode} setDarkMode={setDarkMode} />
+      </div>
+    </div>
+  </div>
+);
+
 
 }
 
