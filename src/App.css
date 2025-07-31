@@ -74,17 +74,55 @@ html.light .footer, #footer-nav h1 {
         }
 
                 html.dark .footer li a:hover {
-            color: red;
-            padding: 8px 24px;
+                    color: red;
+                    padding: 8px 24px;
                 }
 
-        html.light .footer li a:hover {
-            color: red;
-            padding: 8px 24px;
+                html.light .footer li a:hover {
+                    color: red;
+                    padding: 8px 24px;
         }
 
         html.light .footer li a {
             color: black;
+        }
+
+
+        html.light .about-link {
+            color: black;
+            text-decoration: underline;
+            padding: 4px 8px;
+        }
+                html.light .about-link:hover {
+                    color: red;
+                    text-decoration: underline;
+                    transition: color 0.3s ease, text-decoration 0.3s ease, padding 0.3s ease;
+                    padding: 8px 24px;
+                }
+
+        html.dark .about-link {
+            color: white;
+            text-decoration: underline;
+            padding: 4px 8px;
+        }
+
+                html.dark .about-link:hover {
+                    color: red;
+                    text-decoration: underline;
+                    padding: 8px 24px;
+                    transition: color 0.3s ease, text-decoration 0.3s ease, padding 0.3s ease;
+                }
+
+.about-link {
+    text-decoration: underline;
+    color: black;
+}
+
+       .about-link:hover {
+            color: red;
+            text-decoration: underline;
+            padding: 4px 8px;
+            transition: color 0.3s ease, text-decoration 0.3s ease, padding 0.3s ease;
         }
 
 

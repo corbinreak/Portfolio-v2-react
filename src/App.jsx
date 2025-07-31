@@ -23,9 +23,12 @@ function App() {
     <>
     <div className="App">
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-      <About />
+      
       <Projects />
       <Contact />
+    </div>
+    <div className='about' style={{ marginTop: '60px' }}>
+      <About darkMode={darkMode}  setDarkMode={setDarkMode} />
     </div>
       <div className="footer">
         <div className="footer-line">
