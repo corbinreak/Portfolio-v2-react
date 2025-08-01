@@ -28,7 +28,7 @@ function App() {
         <About darkMode={darkMode} setDarkMode={setDarkMode} />
       </div>
       <div className="projects" style={{ marginTop: '60px' }}>
-        <Projects darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Projects darkMode={darkMode} setDarkMode={setDarkMode} style={{  margin: '0 auto' }} />
       </div>
     </div>
 
