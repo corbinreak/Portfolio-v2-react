@@ -29,7 +29,7 @@ import './App.css';
         <div className="content">
           <Routes>
               <Route path="/" element={<Contact />} />
-              <Route path="/about-extended" element={<AboutExtended />} />
+              <Route path="/about-extended" element={<AboutExtended darkMode={darkMode} setDarkMode={setDarkMode} />} />
           </Routes>
         </div>
       </>
