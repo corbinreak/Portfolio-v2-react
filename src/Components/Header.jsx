@@ -65,9 +65,9 @@ function Header({ darkMode, setDarkMode }) {
           <h1 style={homeStyle}>About</h1>
          </Link>
          </span>
-         <a className='toggle' href='#'>
+         <span className='toggle'>
            <img src={toggleIcon} alt="toggle-mode" onClick={() => setDarkMode(prev => !prev)} style={toggleStyle} />
-        </a>
+        </span>
       </div>
       
        

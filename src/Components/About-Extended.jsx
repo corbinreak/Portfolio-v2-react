@@ -58,6 +58,7 @@ const listStyle = {
     marginBottom: '15px',
     marginTop: '15px',
     gap: '20px',
+    width: '80%'
 }
 
 
