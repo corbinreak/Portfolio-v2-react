@@ -1,5 +1,6 @@
 import React from 'react';
 import toggleIcon from '../assets/download.svg';
+import { Link } from 'react-router-dom';
 import '../App.css';
 
 
@@ -52,16 +53,18 @@ function Header({ darkMode, setDarkMode }) {
     return (
       <div className='header' style={headerStyle}>
         <div className='home' style={{ marginLeft: '55px'}} > 
-            <a href="#" style={linkStyle}>
+            <span> <Link to="/" style={linkStyle} >
               <h1 style={homeStyle}>Home</h1>
-            </a>
+              </Link>
+            </span>
       </div>
 
 
       <div className='right-group' style={rightGroupStyle}>
-         <a href='#' style={linkStyle}>
+         <span> <Link to="/About-extended" style={linkStyle} >
           <h1 style={homeStyle}>About</h1>
-         </a>
+         </Link>
+         </span>
          <a className='toggle' href='#'>
            <img src={toggleIcon} alt="toggle-mode" onClick={() => setDarkMode(prev => !prev)} style={toggleStyle} />
         </a>
