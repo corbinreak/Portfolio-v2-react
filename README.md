@@ -33,15 +33,26 @@ A personal portfolio website built with React and Vite. Showcases my projects, s
 ```
 Portfolio-V2-React/
 ├── node_modules/
-├── public/                  
+├── public/
+├──portfolio-backend/
+|          └──.env
+|          └──.gitignore
+|          └──package-lock.json
+|          └──package.json
+|          └──server.js
+|                       
 ├── src/
 │   ├── components/
 │   │   └──About.jsx
+|   |   └──About-Extended.jsx
 |   |   └──Contact.jsx
 |   |   └──Header.jsx
 |   |   └──Projects.jsx
 │   ├── assets/
 │   │   └── download.svg
+|   |   └──Corbin-Reak.svg
+|   |   └──Portfoliov1.jpg
+|   |   └──Project2.jpg
 │   ├── App.jsx
 │   ├── main.jsx
 │   └── index.css
