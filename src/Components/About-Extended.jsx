@@ -3,7 +3,53 @@ import ProfilePic from '../assets/Corbin-Reak.jpeg';
 
 
 function AboutExtended({ darkMode, setDarkMode }) {
-   
+   const [ formData, setFormData ] = useState({
+        email: '',
+        subject: '',
+        message: ''
+   });
+   const [ isSubmitting, setIsSubmitting ] = useState(false);
+   const [ submitMessage, setSubmitMessage ] = useState('');
+
+   const handleChange = (e) => {
+    setFormData({
+        ...formData,
+        [e.target.name]: e.target.value
+    });
+   };
+
+   const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage('');
+
+    try {
+        const response = await fetch('http://localhost:3001/api/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
+
+        const data = await response.json();
+
+        if(response.ok) {
+            setSubmitMessage('Email sent successfully! Thank you for reaching out.');
+            setFormData({
+                email: '',
+                subject: '',
+                message: ''
+            });
+        } else {
+            setSubmitMessage(`Error: ${data.error || 'Failed to send email. Please try again later.'}`);
+        }
+    } catch (error) {
+        setSubmitMessage('Network error. Please check your connection and try again.');
+    } finally {
+        setIsSubmitting(false);
+     }
+    };
    
    
     const containerStyle = {
@@ -50,6 +96,7 @@ const laungageStyle = {
     flexWrap: 'wrap',
     justifyContent: 'center',
     gap: '10px',
+    marginLeft: '15px',
 }
 
 const listStyle = {
@@ -60,6 +107,52 @@ const listStyle = {
     gap: '20px',
     width: '80%'
 }
+
+
+const formContainerStyle = {
+    backgroundColor: darkMode ? '#2a2a2a' : '#f0f0f0',
+    padding: '30px',
+    borderRadius: '12px',
+    boxShadow: darkMode ? ' 0 4px 12px rgba(255, 255, 255, 0.1)' : '0 4px 12px rgba(0, 0, 0, 0.1)',
+    maxWidth: '400px',
+    margin: '20px auto',
+    border: darkMode ? '1px solid #444444' : '1px solid #e0e0e0',
+
+}
+
+const inputStyle = {
+    width: '100%',
+    padding: '12px 16px',
+    margin: '8px 0',
+    border: darkMode ? '1px solid #555555' : '1px solid #dddddd',
+    borderRadius: '8px',
+    backgroundColor: darkMode ? '#333333' : '#ffffff',
+    color: darkMode ? '#ffffff' : '#333333',
+    boxSizing: 'border-box',
+    transition: 'border-color 0.3s ease'
+};
+
+const textareaStyle = {
+    ...inputStyle,
+    heigh: '120px',
+    resize: 'vertical',
+    fontFamily: 'inherit',
+};
+
+const buttonStyle = {
+    width: '100%',
+    padding: '12px 20px',
+    marginTop: '16px',
+    backgroundColor: darkMode ? '#007bff' : '#007bff',
+    color: '#ffffff',
+    border: 'none',
+    borderRadius: '8px',
+    fontSize: '16px',
+    fontWeight: '600',
+    cursor: isSubmitting ? 'not-allowed' : 'pointer',
+    opacity: isSubmitting ? 0.7 : 1,
+    transition: 'background-color 0.3s ease, opacity 0.3s ease',
+};
 
 
     return (
@@ -88,7 +181,7 @@ const listStyle = {
         <div className="Section-Seperator" style={dividerStyle}>
         </div>
          <div className="known-languages" style={laungageStyle}>
-            <h3>Known Languages:</h3>
+            <h3>Known Languages & Familiarity:</h3>
               <ul style={listStyle}>
                 <li style={listStyle}>
                     React
@@ -99,23 +192,84 @@ const listStyle = {
                     <div className='graph' style={{ width: '85%', height: '19px', borderRadius:'8px', backgroundColor: 'orange', marginLeft: '25px', marginTop: '5px', color: 'white', textAlign: 'center' }}><p>4 Months</p></div>
                 </li>
                 <li style={listStyle}>
-                    HTML
+                    JavaScript
                 <div className='graph' style={{ width: '80%', height: '19px', borderRadius:'8px', backgroundColor: 'orange', marginLeft: '25px', marginTop: '5px', color: 'white', textAlign: 'center' }}><p>6 Months</p></div>
                 </li>
                 <li style={listStyle}>
                     CSS
-                    <div className='graph' style={{ width: '70%', height: '19px', borderRadius:'8px', backgroundColor: 'blue', marginLeft: '25px', marginTop: '5px', color: 'white', textAlign: 'center' }}><p>5 Months</p></div>
+                    <div className='graph' style={{ width: '75%', height: '19px', borderRadius:'8px', backgroundColor: 'blue', marginLeft: '25px', marginTop: '5px', color: 'white', textAlign: 'center' }}><p>5 Months</p></div>
                 </li>
                 <li style={listStyle}>
-                    JavaScript
-                    <div className='graph' style={{ width: '60%', height: '19px', borderRadius:'8px', backgroundColor: 'red', marginLeft: '25px', marginTop: '5px', color: 'white', textAlign: 'center' }}><p>4 Months</p></div>
+                    HTML
+                    <div className='graph' style={{ width: '75%', height: '19px', borderRadius:'8px', backgroundColor: 'red', marginLeft: '25px', marginTop: '5px', color: 'white', textAlign: 'center' }}><p>5 Months</p></div>
                 </li>
                 
                
               </ul>
         </div>
+        <div className="Section-Seperator" style={dividerStyle}>
+        </div>
+        <div className="contact-info" style={{ textAlign: 'center', marginTop: '20px' }}>
+            <h3>Email me with any opportunities or collaborations:</h3>
+            <div className='contact-container' style={formContainerStyle}>
+               <form onSubmit={handleSubmit}>
+                <div>
+                <input
+                 type="email"
+                 name="email"
+                 placeholder="Your Email"
+                 value={formData.email}
+                 onChange={handleChange}
+                 required 
+                 style={inputStyle} 
+                />
+                </div>
+                <div>
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required 
+                  style={inputStyle} 
+                />
+                </div>
+                <div>
+                <textarea
+                  name="message"
+                  placeholder="Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  style={textareaStyle}
+                />
+                </div>
+                <button 
+                    type="submit"
+                    disabled={isSubmitting} 
+                    style={buttonStyle}
+                    >
+                    {isSubmitting ? 'Sending...' : 'Send Email'}
+                    </button>
+               </form>
+                {submitMessage && (
+                      <p style={{ 
+                        marginTop: '10px', 
+                        padding: '12px',
+                        borderRadius: '6px',
+                        fontSize: '14px',
+                        backgroundColor: submitMessage.includes('successfully') ? '#d4edda' : '#f8d7da',
+                        color: submitMessage.includes('successfully') ? '#155724' : '#721c24',
+                        border: submitMessage.includes('successfully') ? '1px solid #c3e6cb' : '1px solid #f5c6cb',
+                       }}>
+                            {submitMessage}
+                      </p>
+                 )}
+               </div>
+          </div>  
         </>
-    )
+    );
 }
 
 export default AboutExtended;
