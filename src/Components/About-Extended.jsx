@@ -143,7 +143,7 @@ const buttonStyle = {
     width: '100%',
     padding: '12px 20px',
     marginTop: '16px',
-    backgroundColor: darkMode ? '#007bff' : '#007bff',
+    backgroundColor: darkMode ? 'red' : 'red',
     color: '#ffffff',
     border: 'none',
     borderRadius: '8px',
@@ -159,7 +159,7 @@ const buttonStyle = {
 <>
 
         <div className="about-image-container" style={containerStyle}>
-            <img style={imgStyle} src={ProfilePic} alt="Corbin Reak" /> {/* Placeholder untill i can upload a photo of me */}
+            <img style={imgStyle} src={ProfilePic} alt="Corbin Reak" /> 
             <div className='about-extended-content' style={articleStyle}>
              <h2>
                  Hello, i'm Corbin Reak. I am a 22 Year old Colorado native, who is passionate about web development.
