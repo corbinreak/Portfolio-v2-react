@@ -54,7 +54,9 @@ import './App.css';
   <BrowserRouter>
   <div className="App">
     <Header darkMode={darkMode} setDarkMode={setDarkMode} />
+    <div>
     <MainContent darkMode={darkMode} setDarkMode={setDarkMode} />
+    </div>
     <div className="footer">
       <div className="footer-line">
         <p style={{ marginTop: '15px' }}>&copy; 2025 Corbin Reak</p>

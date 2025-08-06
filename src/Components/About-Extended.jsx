@@ -10,6 +10,7 @@ function AboutExtended({ darkMode, setDarkMode }) {
    });
    const [ isSubmitting, setIsSubmitting ] = useState(false);
    const [ submitMessage, setSubmitMessage ] = useState('');
+   const [isMobile, setIsMobile ] = useState(window.innerWidth <= 768);
 
    const handleChange = (e) => {
     setFormData({
@@ -50,28 +51,38 @@ function AboutExtended({ darkMode, setDarkMode }) {
         setIsSubmitting(false);
      }
     };
-   
-   
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     const containerStyle = {
         display: 'flex',
         alignItems: 'flex-start',
-        padding: '20px',
-        marginTop: '68px',
-        marginLeft: '55px',
+        padding: isMobile ? '15px' : '20px',
+        marginTop: isMobile ? '80px' : '68px',
+        marginLeft: isMobile? '0' : '55px',
         width: '100%',
+        flexDirection: isMobile ? 'column' : 'row',
+        textAlign: isMobile ? 'center' : 'left'
    }
 
 
    const imgStyle = {
-    width: '180px',
-    height: '180px',
+    width: isMobile ? '120px' : '180px',
+    height: isMobile ? '120px' : '180px',
     objectFit: 'cover',
     borderRadius: '50%',
-    marginRight: '32px',
-    marginLeft: '155px',
-    zoom: '200%',
-
-   }
+    marginRight: isMobile ? '0' : '32px',
+    marginLeft: isMobile ? 'auto' : '155px',
+    marginBottom: isMobile ? '20px' : '0',
+    
+   };
 
 
    const articleStyle = {
@@ -96,7 +107,8 @@ const laungageStyle = {
     flexWrap: 'wrap',
     justifyContent: 'center',
     gap: '10px',
-    marginLeft: '15px',
+    marginLeft: isMobile ? '0' : '15px',
+    padding: isMobile ? '0 15px' : '0',
 }
 
 const listStyle = {
@@ -134,7 +146,7 @@ const inputStyle = {
 
 const textareaStyle = {
     ...inputStyle,
-    heigh: '120px',
+    height: '120px',
     resize: 'vertical',
     fontFamily: 'inherit',
 };
@@ -185,23 +197,23 @@ const buttonStyle = {
               <ul style={listStyle}>
                 <li style={listStyle}>
                     React
-                    <div className='graph' style={{ width: '90%', height: '19px', borderRadius:'8px', backgroundColor: 'purple', marginLeft: '25px', marginTop: '5px', color: 'white', textAlign: 'center' }}><p>4 Months</p></div>
+                    <div className='graph' style={{ width: isMobile ? '100%' : '90%', height: '19px', borderRadius:'8px', backgroundColor: 'purple', marginLeft: isMobile ? '0' : '25px', marginTop: '5px', color: 'white', textAlign: 'center' }}><p>4 Months</p></div>
                 </li>
                 <li style={listStyle}>
                     Node.js
-                    <div className='graph' style={{ width: '85%', height: '19px', borderRadius:'8px', backgroundColor: 'orange', marginLeft: '25px', marginTop: '5px', color: 'white', textAlign: 'center' }}><p>4 Months</p></div>
+                    <div className='graph' style={{ width: isMobile ? '95%' : '85%', height: '19px', borderRadius:'8px', backgroundColor: 'orange', marginLeft: isMobile ? '0' : '25px', marginTop: '5px', color: 'white', textAlign: 'center' }}><p>4 Months</p></div>
                 </li>
                 <li style={listStyle}>
                     JavaScript
-                <div className='graph' style={{ width: '80%', height: '19px', borderRadius:'8px', backgroundColor: 'orange', marginLeft: '25px', marginTop: '5px', color: 'white', textAlign: 'center' }}><p>6 Months</p></div>
+                <div className='graph' style={{ width: isMobile ? '90%' : '80%', height: '19px', borderRadius:'8px', backgroundColor: 'orange', marginLeft: isMobile ? '0' : '25px', marginTop: '5px', color: 'white', textAlign: 'center' }}><p>6 Months</p></div>
                 </li>
                 <li style={listStyle}>
                     CSS
-                    <div className='graph' style={{ width: '75%', height: '19px', borderRadius:'8px', backgroundColor: 'blue', marginLeft: '25px', marginTop: '5px', color: 'white', textAlign: 'center' }}><p>5 Months</p></div>
+                    <div className='graph' style={{ width: isMobile ? '85%' : '75%', height: '19px', borderRadius:'8px', backgroundColor: 'blue', marginLeft: isMobile ? '0' : '25px', marginTop: '5px', color: 'white', textAlign: 'center' }}><p>5 Months</p></div>
                 </li>
                 <li style={listStyle}>
                     HTML
-                    <div className='graph' style={{ width: '75%', height: '19px', borderRadius:'8px', backgroundColor: 'red', marginLeft: '25px', marginTop: '5px', color: 'white', textAlign: 'center' }}><p>5 Months</p></div>
+                    <div className='graph' style={{ width: isMobile ? '85%' : '75%', height: '19px', borderRadius:'8px', backgroundColor: 'red', marginLeft: isMobile ? '0' : '25px', marginTop: '5px', color: 'white', textAlign: 'center' }}><p>5 Months</p></div>
                 </li>
                 
                

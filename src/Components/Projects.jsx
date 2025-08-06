@@ -47,7 +47,7 @@ function Projects({ darkMode, setDarkMode }) {
         <>
          <ul style={listStyle}>
             <li>
-              <div style={imagesContainer}>
+              <div className='projects-container'>
                     <Link to="/Project1" className='project-link'>
                         <img
                           src={Project1} 

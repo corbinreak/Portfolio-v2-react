@@ -7,52 +7,66 @@ A personal portfolio website built with React and Vite. Showcases my projects, s
 - Responsive design
 - Project showcase
 - About section
-- Contact form
+- Contact form (with backend)
 - Dark/light mode toggle
 
 ## Technologies Used
 - React
 - Vite
+- Node.js/Express (backend)
 - CSS
 
 ## Getting Started
+
+### Frontend
+
 1. Clone the repository:
-   ```
+   ```bash
    git clone https://github.com/yourusername/portfolio-v2-react.git
    ```
-2. Install dependencies:
-   ```
+2. Install frontend dependencies:
+   ```bash
    npm install
    ```
 3. Start the development server:
-   ```
+   ```bash
    npm run dev
+   ```
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+
+### Backend
+
+1. Go to the backend folder:
+   ```bash
+   cd portfolio-backend
+   ```
+2. Install backend dependencies:
+   ```bash
+   npm install
+   ```
+3. Copy `.env.example` to `.env` and set environment variables.
+4. Start the backend server:
+   ```bash
+   npm start
    ```
 
 ## Folder Structure
+
 ```
 Portfolio-V2-React/
 ├── node_modules/
 ├── public/
-├──portfolio-backend/
-|          └──.env
-|          └──.gitignore
-|          └──package-lock.json
-|          └──package.json
-|          └──server.js
-|                       
+├── portfolio-backend/
+│   ├── .env
+│   ├── server.js
+│   ├── package.json
+│   └── ...
 ├── src/
 │   ├── components/
-│   │   └──About.jsx
-|   |   └──About-Extended.jsx
-|   |   └──Contact.jsx
-|   |   └──Header.jsx
-|   |   └──Projects.jsx
 │   ├── assets/
-│   │   └── download.svg
-|   |   └──Corbin-Reak.svg
-|   |   └──Portfoliov1.jpg
-|   |   └──Project2.jpg
 │   ├── App.jsx
 │   ├── main.jsx
 │   └── index.css
@@ -60,10 +74,8 @@ Portfolio-V2-React/
 ├── .gitignore
 ├── index.html
 ├── package.json
-├── package-lock.json
-├── vite.config.js
 ├── README.md
-└── eslint.config.js
+└── ...
 ```
 
 ## License
