@@ -24,8 +24,15 @@ exports.handler = async (event, context) => {
   }
 
   try {
+
+    //Debbugging: logging;
+    console.log('Environment Variables Check:');
+    console.log('EMAIL_USER exists:', !!process.env.EMAIL_USER);
+    console.log('EMAIL_USER value:', process.env.EMAIL_USER);
+    console.log('EMAIL_PASS exists:', !!process.env.EMAIL_PASS);
     // Parse the request body
     const { email, subject, message } = JSON.parse(event.body);
+    console.log('Recieived data:', { email, subject, messageLength: message?.length });
 
     // Validate input (same as your Express version)
     if (!email || !subject || !message) {
@@ -37,7 +44,7 @@ exports.handler = async (event, context) => {
     }
 
     // Email transport setup (same as your Express version)
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
         user: process.env.EMAIL_USER,
