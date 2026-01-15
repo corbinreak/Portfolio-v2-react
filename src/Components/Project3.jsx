@@ -150,7 +150,7 @@ function Project3({ darkMode, setDarkMode }) {
 
                 {/* Project Links */}
                 <section style={sectionStyle}>
-                    <h2>Project Links</h2>
+                    <h2>Project Link</h2>
                     <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
                         <a
                             href="https://github.com/corbinreak/ABC-Studio-Fitness"

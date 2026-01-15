@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Portfoliov1 from '../assets/Portfoliov1.jpg';
+import Portfoliov1 from '../assets/Portfoliov1.png';
 
 
 function Project1({ darkMode, setDarkMode }) {
@@ -151,7 +151,7 @@ function Project1({ darkMode, setDarkMode }) {
     
                 {/* Links */}
                 <section style={sectionStyle}>
-                    <h2>Project Links</h2>
+                    <h2>Project Link</h2>
                     <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
                         <a
                             href="https://github.com/corbinreak/Portfolio-Website.git"

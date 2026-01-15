@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Jammming from '../assets/Jammming.jpg';
+import Jammming from '../assets/Jammming.png';
 
 
 function Project2({ darkMode, setDarkMode }) {
@@ -81,7 +81,7 @@ function Project2({ darkMode, setDarkMode }) {
          <div style={headerStyle}>
             <h1>Jammming</h1>
             <p style={{ fontSize: '18px', color: darkMode ? '#cccccc' : '#666666' }}>
-                My first attempt intergrating an API
+                My first attempt integrating an API
             </p>
          </div>
 
@@ -102,16 +102,36 @@ function Project2({ darkMode, setDarkMode }) {
                 </p>
             </section>
 
-            {/* What i learned */}
+            {/* What I Learned */}
             <section style={sectionStyle}>
-                <h2>What I Learned</h2>
-                <ul>
-                    <li style={{ marginTop: '10px', marginBottom: '10px' }}><strong>API Integration:</strong> Learned how to use `try` statements effectively, along with `fetch` for making API calls and handling responses.</li>
-                    <li style={{ marginTop: '10px', marginBottom: '10px' }}><strong>Async Functions:</strong> Gained a deeper understanding of asynchronous programming and its importance in handling API requests.</li>
-                    <li style={{ marginTop: '10px', marginBottom: '10px' }}><strong>JavaScript Fundamentals:</strong> Enhanced my skills in adding interactivity and dynamic behavior to web applications.</li>
-                    <li style={{ marginTop: '10px', marginBottom: '10px' }}><strong>Web Design:</strong> Improved my understanding of color theory, typography, and user experience principles.</li>
-                    <li style={{ marginTop: '10px', marginBottom: '10px' }}><strong>Problem Solving:</strong> Developed debugging skills and learned to find solutions to technical challenges efficiently.</li>
-                    <li style={{ marginTop: '10px', marginBottom: '10px' }}><strong>Version Control:</strong> Acquired hands-on experience with Git and GitHub for managing code and collaborating on projects.</li>
+                <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem', color: '#f8fafc' }}>
+                What I Learned
+                </h2>
+                <ul style={{ listStyleType: 'none', padding: 0 }}>
+                    <li style={{ marginBottom: '15px' }}>
+                        <strong style={{ color: '#3b82f6' }}>Complex State Management:</strong> 
+                        Mastered the use of `useState` to handle nested objects, multi-step forms, and real-time synchronization across different UI views.
+                    </li>
+                    <li style={{ marginBottom: '15px' }}>
+                        <strong style={{ color: '#3b82f6' }}>TypeScript & Type Safety:</strong> 
+                        Implemented union types for view switching and ensured data integrity by explicitly defining state shapes, reducing runtime errors.
+                    </li>
+                    <li style={{ marginBottom: '15px' }}>
+                        <strong style={{ color: '#3b82f6' }}>Dynamic UI Logic:</strong> 
+                        Developed real-time calculation engines to transform user input (Distance/MPG) into instant visual feedback using JavaScript arithmetic.
+                    </li>
+                    <li style={{ marginBottom: '15px' }}>
+                        <strong style={{ color: '#3b82f6' }}>Component Architecture:</strong> 
+                        Learned how to structure a single-page application (SPA) using conditional rendering to swap between Welcome, Signup, and Planner screens.
+                    </li>
+                    <li style={{ marginBottom: '15px' }}>
+                        <strong style={{ color: '#3b82f6' }}>UX-Focused Styling:</strong> 
+                        Utilized Tailwind CSS to create an accessible, mobile-first interface with high-contrast elements and interactive loading states.
+                    </li>
+                    <li style={{ marginBottom: '15px' }}>
+                        <strong style={{ color: '#3b82f6' }}>Simulating Workflows:</strong> 
+                        Gained experience mocking API behavior with `setTimeout` to build and test user-centric features before backend integration.
+                    </li>
                 </ul>
             </section>
 
@@ -152,7 +172,7 @@ function Project2({ darkMode, setDarkMode }) {
     
                 {/* Links */}
                 <section style={sectionStyle}>
-                    <h2>Project Links</h2>
+                    <h2>Project Link</h2>
                     <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
                         <a
                             href="https://github.com/corbinreak/jammming.git"
