@@ -1,6 +1,7 @@
 import React from 'react'; 
 import Project1 from '../assets/Portfoliov1.jpg'; 
 import Jammming from '../assets/Jammming.jpg';
+import ABC from '../assets/ABC-Studio-Fitness.png'; 
 import { Link } from 'react-router-dom';
 
 
@@ -58,6 +59,12 @@ function Projects({ darkMode, setDarkMode }) {
                     <Link to="/Project2" className='project-link'>
                         <img
                           src={Jammming} 
+                          style={imgStyleRight} 
+                        />
+                    </Link>
+                    <Link to="/Project3" className='project-link'>
+                        <img
+                          src={ABC} 
                           style={imgStyleRight} 
                         />
                     </Link>

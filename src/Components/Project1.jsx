@@ -105,12 +105,12 @@ function Project1({ darkMode, setDarkMode }) {
             <section style={sectionStyle}>
                 <h2>What I Learned</h2>
                 <ul>
-                    <li><strong>HTML Structure:</strong> How to properly structure web content with semantic HTML</li>
-                    <li><strong>CSS Styling:</strong> Basics of styling, layout, and responsive design principles</li>
-                    <li><strong>JavaScript Fundamentals:</strong> Adding interactivity and dynamic behavior</li>
-                    <li><strong>Web Design:</strong> Understanding of color theory, typography, and user experience</li>
-                    <li><strong>Problem Solving:</strong> Debugging code and finding solutions to technical challenges</li>
-                    <li><strong>Version Control:</strong> First experience with Git and GitHub</li>
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}><strong>HTML Structure:</strong> How to properly structure web content with semantic HTML</li>
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}><strong>CSS Styling:</strong> Basics of styling, layout, and responsive design principles</li>
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}><strong>JavaScript Fundamentals:</strong> Adding interactivity and dynamic behavior</li>
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}><strong>Web Design:</strong> Understanding of color theory, typography, and user experience</li>
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}><strong>Problem Solving:</strong> Debugging code and finding solutions to technical challenges</li>
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}><strong>Version Control:</strong> First experience with Git and GitHub</li>
                 </ul>
             </section>
 
@@ -130,10 +130,10 @@ function Project1({ darkMode, setDarkMode }) {
             <section style={sectionStyle}>
                 <h2>Key Features</h2>
                 <ul>
-                    <li>Responsive design that adapts to different screen sizes</li>
-                    <li>Interactive elements using JavaScript</li>
-                    <li>Clean and simple layout focusing on content</li>
-                    <li>Accessible navigation for a better user experience</li>
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}>Responsive design that adapts to different screen sizes</li>
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}>Interactive elements using JavaScript</li>
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}>Clean and simple layout focusing on content</li>
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}>Accessible navigation for a better user experience</li>
                 </ul>
             </section>
 

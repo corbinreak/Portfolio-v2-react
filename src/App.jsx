@@ -8,6 +8,7 @@ import Footer from './Components/Footer';
 import AboutExtended from './Components/About-Extended';
 import Project1  from './Components/Project1';
 import Project2  from './Components/Project2';
+import Project3 from './Components/Project3';
 
 import './App.css';
 
@@ -34,6 +35,7 @@ import './App.css';
               <Route path="/about-extended" element={<AboutExtended darkMode={darkMode} setDarkMode={setDarkMode} />} />
               <Route path="/Project1" element={<Project1 darkMode={darkMode} setDarkMode={setDarkMode} />} />
               <Route path="/Project2" element={<Project2 darkMode={darkMode} setDarkMode={setDarkMode} />} />
+              <Route path="/Project3" element={<Project3 darkMode={darkMode} setDarkMode={setDarkMode} />} />
           </Routes>
         </div>
       </>

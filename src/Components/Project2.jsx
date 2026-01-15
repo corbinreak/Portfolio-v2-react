@@ -106,12 +106,12 @@ function Project2({ darkMode, setDarkMode }) {
             <section style={sectionStyle}>
                 <h2>What I Learned</h2>
                 <ul>
-                    <li><strong>API Integration:</strong> Learned how to use `try` statements effectively, along with `fetch` for making API calls and handling responses.</li>
-                    <li><strong>Async Functions:</strong> Gained a deeper understanding of asynchronous programming and its importance in handling API requests.</li>
-                    <li><strong>JavaScript Fundamentals:</strong> Enhanced my skills in adding interactivity and dynamic behavior to web applications.</li>
-                    <li><strong>Web Design:</strong> Improved my understanding of color theory, typography, and user experience principles.</li>
-                    <li><strong>Problem Solving:</strong> Developed debugging skills and learned to find solutions to technical challenges efficiently.</li>
-                    <li><strong>Version Control:</strong> Acquired hands-on experience with Git and GitHub for managing code and collaborating on projects.</li>
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}><strong>API Integration:</strong> Learned how to use `try` statements effectively, along with `fetch` for making API calls and handling responses.</li>
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}><strong>Async Functions:</strong> Gained a deeper understanding of asynchronous programming and its importance in handling API requests.</li>
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}><strong>JavaScript Fundamentals:</strong> Enhanced my skills in adding interactivity and dynamic behavior to web applications.</li>
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}><strong>Web Design:</strong> Improved my understanding of color theory, typography, and user experience principles.</li>
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}><strong>Problem Solving:</strong> Developed debugging skills and learned to find solutions to technical challenges efficiently.</li>
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}><strong>Version Control:</strong> Acquired hands-on experience with Git and GitHub for managing code and collaborating on projects.</li>
                 </ul>
             </section>
 
@@ -133,10 +133,10 @@ function Project2({ darkMode, setDarkMode }) {
             <section style={sectionStyle}>
                 <h2>Key Features</h2>
                 <ul>
-                    <li>Search for any songs, albums and or artists.</li>
-                    <li>Playlist creation.</li>
-                    <li>Spotify Intergration.</li>
-                    <li>Simple but clean layout.</li>
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}>Search for any songs, albums and or artists.</li>
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}>Playlist creation.</li>
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}>Spotify Intergration.</li>
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}>Simple but clean layout.</li>
                 </ul>
             </section>
 
