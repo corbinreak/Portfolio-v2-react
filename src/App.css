@@ -172,28 +172,35 @@ html.light .about-link:hover {
 
 /* === Projects Section === */
 .projects-container {
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
-  flex-wrap: wrap;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+gap: 30px;
+justify-content: center;
+align-items: flex-start;
+padding: 20px;
+width: 100%;
+box-sizing: border-box;
 }
 
-.project-image {
+.project-link {
+  display: block;
+  text-decoration: none;
+  /* (100% / 2 ) - gap = roughly 45% */
   width: 45%;
-  max-width: 500px;
-  height: auto;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  max-width: 600px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
-.project-image img {
+.project-link:hover {
+  transform: translateY(-8px);
+}
+
+.project-link img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  display: block;
 }
 
 /* === Animation === */

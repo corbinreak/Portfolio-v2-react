@@ -28,22 +28,26 @@ function Projects({ darkMode, setDarkMode }) {
         width: '100%',
         gap: '20px',
     }
-    
-    const imgStyleLeft = {
-        width: '600px',
-        height: 'auto',
+
+    const commonImgStyle = {
+        width: '100%',
+        height: '300px',
+        objectFit: 'cover',
+        objectPosition: 'top',
         borderRadius: '8px',
         boxShadow: darkMode ? '0 0 10px rgba(255, 255, 255, 0.2)' : '0 0 10px rgba(0, 0, 0, 0.2)',
-        marginBottom: '40px',       
+        transition: 'transform 0.3s ease'
+    }
+    
+    const imgStyleLeft = {
+             ...commonImgStyle,
+             marginBottom: '40px'
     }
 
     const imgStyleRight = {
-        width: '600px',
-        height: 'auto',
-        borderRadius: '8px',
-        boxShadow: darkMode ? '0 0 10px rgba(255, 255, 255, 0.2)' : '0 0 10px rgba(0, 0, 0, 0.2)',
-        
+        ...commonImgStyle,
     }
+    
 
     return (
         <>
