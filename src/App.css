@@ -244,6 +244,7 @@ html.light .about-link:hover {
   .projects-container {
     flex-direction: column;
     gap: 20px;
+    align-items: center;
   }
 
   .right-group {

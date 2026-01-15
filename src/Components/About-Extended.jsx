@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ProfilePic from '../assets/Corbin-Reak.jpeg'; 
-
+import ExperienceClock from './ExperienceClock';
 
 function AboutExtended({ darkMode, setDarkMode }) {
    const [ formData, setFormData ] = useState({
@@ -51,6 +51,8 @@ function AboutExtended({ darkMode, setDarkMode }) {
         setIsSubmitting(false);
      }
     };
+
+    
 
     useEffect(() => {
         const handleResize = () => {
@@ -119,6 +121,15 @@ const listStyle = {
     gap: '20px',
     width: '80%'
 }
+
+const skills = [
+    { name: 'HTML', date: "2025-03-01", color: 'red', width: "90%" },
+    { name: 'JavaScript', date: "2025-03-01", color: 'orange', width: "85%" },
+    { name: 'CSS', date: "2025-03-01", color: 'blue', width: "80%" },
+    { name: 'Node.js', date: "2025-08-01", color: 'maroon', width: "75%" },
+    { name: 'React', date: "2025-08-01", color: 'purple', width: "75%" },
+    { name: 'TailWind CSS', date: "2025-09-01", color: 'teal', width: "70%" },
+]
 
 
 const formContainerStyle = {
@@ -195,28 +206,21 @@ const buttonStyle = {
          <div className="known-languages" style={laungageStyle}>
             <h3>Known Languages & Familiarity:</h3>
               <ul style={listStyle}>
-                <li style={listStyle}>
-                    React
-                    <div className='graph' style={{ width: isMobile ? '100%' : '90%', height: '19px', borderRadius:'8px', backgroundColor: 'purple', marginLeft: isMobile ? '0' : '25px', marginTop: '5px', color: 'white', textAlign: 'center' }}><p>4 Months</p></div>
-                </li>
-                <li style={listStyle}>
-                    Node.js
-                    <div className='graph' style={{ width: isMobile ? '95%' : '85%', height: '19px', borderRadius:'8px', backgroundColor: 'orange', marginLeft: isMobile ? '0' : '25px', marginTop: '5px', color: 'white', textAlign: 'center' }}><p>4 Months</p></div>
-                </li>
-                <li style={listStyle}>
-                    JavaScript
-                <div className='graph' style={{ width: isMobile ? '90%' : '80%', height: '19px', borderRadius:'8px', backgroundColor: 'orange', marginLeft: isMobile ? '0' : '25px', marginTop: '5px', color: 'white', textAlign: 'center' }}><p>6 Months</p></div>
-                </li>
-                <li style={listStyle}>
-                    CSS
-                    <div className='graph' style={{ width: isMobile ? '85%' : '75%', height: '19px', borderRadius:'8px', backgroundColor: 'blue', marginLeft: isMobile ? '0' : '25px', marginTop: '5px', color: 'white', textAlign: 'center' }}><p>5 Months</p></div>
-                </li>
-                <li style={listStyle}>
-                    HTML
-                    <div className='graph' style={{ width: isMobile ? '85%' : '75%', height: '19px', borderRadius:'8px', backgroundColor: 'red', marginLeft: isMobile ? '0' : '25px', marginTop: '5px', color: 'white', textAlign: 'center' }}><p>5 Months</p></div>
-                </li>
-                
-               
+                {skills.map((skill) => (
+                    <li key={skill.name} style={listStyle}>
+                        {skill.name}
+                        <div style={{
+                            width: skill.width,
+                            backgroundColor: skill.color,
+                            height: '19px',
+                            borderRadius: '8px',
+                            textAlign: 'center',
+                            color: 'white',
+                        }}>
+                            <ExperienceClock startDate={skill.date} />
+                        </div>
+                    </li>
+                ))}
               </ul>
         </div>
         <div className="Section-Seperator" style={dividerStyle}>
