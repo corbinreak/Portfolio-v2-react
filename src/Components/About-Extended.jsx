@@ -203,25 +203,32 @@ const buttonStyle = {
         </div>
         <div className="Section-Seperator" style={dividerStyle}>
         </div>
-         <div className="known-languages" style={laungageStyle}>
-            <h3>Known Languages & Familiarity:</h3>
-              <ul style={listStyle}>
+        <div className="known-languages" style={laungageStyle}>
+            <h3 style={{ width: '100%', textAlign: 'center' }}>Known Languages & Familiarity:</h3>
+            <ul style={{ ...listStyle, padding: 0, width: isMobile ? '100%' : '80%' }}>
                 {skills.map((skill) => (
-                    <li key={skill.name} style={listStyle}>
-                        {skill.name}
+                    <li key={skill.name} style={{ marginBottom: '20px', listStyleType: 'none' }}>
+                        <span style={{ fontWeight: 'bold', display: 'block', marginBottom: '5px' }}>
+                            {skill.name}
+                        </span>
                         <div style={{
-                            width: skill.width,
+                            width: isMobile ? '100%' : skill.width,
                             backgroundColor: skill.color,
-                            height: '19px',
+                            height: '22px', 
                             borderRadius: '8px',
-                            textAlign: 'center',
                             color: 'white',
+                            display: 'flex',       
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            fontSize: '12px',
+                            fontWeight: 'bold',
+                            marginLeft: isMobile ? '0' : '25px'
                         }}>
                             <ExperienceClock startDate={skill.date} />
                         </div>
                     </li>
                 ))}
-              </ul>
+            </ul>
         </div>
         <div className="Section-Seperator" style={dividerStyle}>
         </div>
