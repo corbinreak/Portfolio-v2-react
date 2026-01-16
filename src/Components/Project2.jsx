@@ -104,33 +104,22 @@ function Project2({ darkMode, setDarkMode }) {
 
             {/* What I Learned */}
             <section style={sectionStyle}>
-                <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem', color: '#f8fafc' }}>
-                What I Learned
-                </h2>
-                <ul style={{ listStyleType: 'none', padding: 0 }}>
-                    <li style={{ marginBottom: '15px' }}>
-                        <strong style={{ color: '#3b82f6' }}>Complex State Management:</strong> 
-                        Mastered the use of `useState` to handle nested objects, multi-step forms, and real-time synchronization across different UI views.
+                <h2>What I Learned</h2>
+                <ul>
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}>
+                        <strong>OAuth 2.0 Integration:</strong> Learned how to implement the Spotify Implicit Grant flow to securely authenticate users and manage access tokens.
                     </li>
-                    <li style={{ marginBottom: '15px' }}>
-                        <strong style={{ color: '#3b82f6' }}>TypeScript & Type Safety:</strong> 
-                        Implemented union types for view switching and ensured data integrity by explicitly defining state shapes, reducing runtime errors.
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}>
+                        <strong>Asynchronous API Requests:</strong> Mastered the use of the Fetch API and `async/await` to perform real-time searches and POST data to external endpoints.
                     </li>
-                    <li style={{ marginBottom: '15px' }}>
-                        <strong style={{ color: '#3b82f6' }}>Dynamic UI Logic:</strong> 
-                        Developed real-time calculation engines to transform user input (Distance/MPG) into instant visual feedback using JavaScript arithmetic.
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}>
+                        <strong>Complex State Management:</strong> Developed logic to sync track data between search results and custom playlists without duplicating items in the UI.
                     </li>
-                    <li style={{ marginBottom: '15px' }}>
-                        <strong style={{ color: '#3b82f6' }}>Component Architecture:</strong> 
-                        Learned how to structure a single-page application (SPA) using conditional rendering to swap between Welcome, Signup, and Planner screens.
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}>
+                        <strong>Modular Component Design:</strong> Structured the application into reusable components like SearchBar, TrackList, and Playlist to maintain a clean codebase.
                     </li>
-                    <li style={{ marginBottom: '15px' }}>
-                        <strong style={{ color: '#3b82f6' }}>UX-Focused Styling:</strong> 
-                        Utilized Tailwind CSS to create an accessible, mobile-first interface with high-contrast elements and interactive loading states.
-                    </li>
-                    <li style={{ marginBottom: '15px' }}>
-                        <strong style={{ color: '#3b82f6' }}>Simulating Workflows:</strong> 
-                        Gained experience mocking API behavior with `setTimeout` to build and test user-centric features before backend integration.
+                    <li style={{ marginTop: '10px', marginBottom: '10px' }}>
+                        <strong>UI/UX Consistency:</strong> Focused on creating a seamless flow from searching for a song to seeing it appear in a user's actual Spotify account.
                     </li>
                 </ul>
             </section>
